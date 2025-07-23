@@ -1,6 +1,6 @@
 package kr.co.joenconsulting.myrestfulservice.controller;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import kr.co.joenconsulting.myrestfulservice.bean.User;
 import kr.co.joenconsulting.myrestfulservice.dao.UserDaoService;
 import kr.co.joenconsulting.myrestfulservice.exception.UserNotFoundException;

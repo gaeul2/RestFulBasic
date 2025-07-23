@@ -3,6 +3,7 @@ package kr.co.joenconsulting.myrestfulservice.exception;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 //import org.springframework.http.HttpStatusCode;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -31,7 +32,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
     }
 
     @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
         ExceptionResponse exceptionResponse =
                 //request.getDescription 인데 상세정보를 client에 보여주지 않기위해 false부여
 //                new ExceptionResponse(new Date(), ex.getMessage(), ex.getBindingResult().toString());
