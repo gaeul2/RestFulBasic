@@ -10,3 +10,10 @@ spring:
 #  mvc:
 #    pathmatch:
 #      matching-strategy: ant_path_matcher
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #보안문제있을 수 있으므로 개발할때만 이렇게 쓸것.
+
